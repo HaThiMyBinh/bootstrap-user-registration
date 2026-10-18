@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản - Bootstrap Forms & Carousel</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .carousel-item img {
+            height: 520px;
+            object-fit: cover;
+        }
+        @media (max-width: 991.98px) {
+            .carousel-item img {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column">
+
+    <!-- Header / Navbar tối giản -->
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-box-seam-fill text-warning me-2"></i>TechPortal
+            </a>
+            <span class="navbar-text text-white-50 small">
+                Đăng ký thành viên
+            </span>
+        </div>
+    </nav>
+
+    <!-- Main Container: Chia 2 cột bằng Bootstrap Grid System -->
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center align-items-center g-4">
+            
+            <!-- Cột 1: Bootstrap Carousel hiển thị các lợi ích của dịch vụ (col-lg-6) -->
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div id="benefitsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carousel Indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#benefitsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Lợi ích 1"></button>
+                            <button type="button" data-bs-target="#benefitsCarousel" data-bs-slide-to="1" aria-label="Lợi ích 2"></button>
+                            <button type="button" data-bs-target="#benefitsCarousel" data-bs-slide-to="2" aria-label="Lợi ích 3"></button>
+                        </div>
+
+                        <!-- Carousel Slides -->
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Hợp tác phát triển">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3 mb-4 mx-3">
+                                    <h5 class="fw-bold text-warning"><i class="bi bi-people-fill me-2"></i>Kết Nối Cộng Đồng Công Nghệ</h5>
+                                    <p class="small mb-0">Tham gia mạng lưới hơn 50.000+ lập trình viên và chuyên gia hàng đầu cả nước.</p>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Học tập không giới hạn">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3 mb-4 mx-3">
+                                    <h5 class="fw-bold text-info"><i class="bi bi-journal-code me-2"></i>Tài Liệu & Khóa Học Độc Quyền</h5>
+                                    <p class="small mb-0">Truy cập không giới hạn thư viện bài giảng, source code mẫu và dự án thực tế.</p>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Cơ hội nghề nghiệp">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3 mb-4 mx-3">
+                                    <h5 class="fw-bold text-success"><i class="bi bi-briefcase-fill me-2"></i>Cơ Hội Nghề Nghiệp Hấp Dẫn</h5>
+                                    <p class="small mb-0">Nhận thông báo việc làm và kết nối trực tiếp với các nhà tuyển dụng uy tín.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#benefitsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#benefitsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột 2: Form Đăng Ký Tài Khoản (col-lg-6) -->
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold text-primary mb-2">Đăng Ký Tài Khoản</h2>
+                        <p class="text-muted small">Tạo tài khoản nhanh chóng chỉ trong vài bước đơn giản</p>
+                    </div>
+
+                    <form action="#" method="POST" novalidate>
+                        
+                        <!-- 1. Họ và tên: dùng input-group có icon -->
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted"><i class="bi bi-person-fill"></i></span>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nhập đầy đủ họ và tên" required>
+                            </div>
+                        </div>
+
+                        <!-- 2. Email: dùng input-group có icon -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Địa chỉ Email <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted"><i class="bi bi-envelope-fill"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="form-text text-muted">Chúng tôi cam kết không chia sẻ email của bạn cho bên thứ ba.</div>
+                        </div>
+
+                        <!-- 3. Mật khẩu: dùng input-group có icon -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-semibold">Mật khẩu <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted"><i class="bi bi-lock-fill"></i></span>
+                                <input type="password" class="form-control" id="password" placeholder="Tối thiểu 8 ký tự" required>
+                            </div>
+                        </div>
+
+                        <!-- 4. Xác nhận mật khẩu: dùng input-group có icon -->
+                        <div class="mb-4">
+                            <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted"><i class="bi bi-shield-lock-fill"></i></span>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+                        </div>
+
+                        <!-- Checkbox điều khoản sử dụng -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="agreeTerms" required checked>
+                            <label class="form-check-label text-muted small" for="agreeTerms">
+                                Tôi đồng ý với <a href="#" class="text-primary text-decoration-none">Điều khoản dịch vụ</a> và <a href="#" class="text-primary text-decoration-none">Chính sách bảo mật</a>.
+                            </label>
+                        </div>
+
+                        <!-- Nút Đăng ký (btn-primary, d-grid) -->
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg fw-bold shadow-sm">
+                                <i class="bi bi-person-plus-fill me-2"></i>Đăng Ký Ngay
+                            </button>
+                        </div>
+
+                        <!-- Liên kết Đăng nhập -->
+                        <div class="text-center text-muted small">
+                            Đã có tài khoản? <a href="#" class="text-primary fw-semibold text-decoration-none">Đăng nhập ngay</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0 small text-white-50">&copy; 2024 TechPortal. Thiết kế với Bootstrap Forms & Carousel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
